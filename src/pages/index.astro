@@ -1,11 +1,239 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Image from "astro/components/Image.astro";
+import Layout from "../layouts/Layout.astro";
+import deskMob from "../assets/images/desk-mob.png";
+import chartsImage from "../assets/images/charts.png";
+import usersImage from "../assets/images/users.png";
+import mobileDetail from "../assets/images/mobile-detail.png";
 ---
 
 <Layout>
-	<Welcome />
+	<div class="pt-20">
+		<nav
+		  class="flex justify-between items-center py-2 px-3 w-11/12 sm:w-6/12 mx-auto rounded-full border-2 border-gray-400 mt-10
+				  backdrop-blur-[21px] backdrop-saturate-[124%] bg-white/30 borde
+				  fixed left-1/2 -translate-x-1/2 top-0 z-50"
+		>
+		  <h2 class="text-xl font-semibold text-center text-[#1b1b1b]">
+			Reporte Rapido
+		  </h2>
+		  <ul class="flex gap-3 font-medium">
+			<li class="px-3 py-2 rounded-full transition-colors hover:bg-slate-100 cursor-pointer">Inicio</li>
+			<li class="px-3 py-2 rounded-full transition-colors hover:bg-slate-100 cursor-pointer">Caracteristicas</li>
+			<li class="px-3 py-2 rounded-full transition-colors hover:bg-slate-100 cursor-pointer">Sobre nosotros  </li>
+			<li></li>
+		  </ul>
+
+		</nav>
+		<div class="m-auto w-6/12">
+			<h1 class="text-5xl font-medium 2xl:mt-24 mt-20 text-[#1b1b1b] m-auto text-center">
+				Reporta incidencias con fotos y descripción en segundos.
+			</h1>
+			<h3 class="text-3xl font-semibold mt-2 mb-12 text-gray-700 m-auto text-center">
+				Obtén análisis automáticos con IA y priorización inteligente.
+			</h3>
+			<div class="flex justify-center gap-5">
+				<button class="px-3 py-2 border-2 transition-colors bg-sky-500 text-white rounded-full hover:bg-sky-600 cursor-pointer font-medium">
+					Contactanos
+				</button>
+				<button class="px-3 py-2 border-2 transition-colors border-gray-500 rounded-full hover:bg-slate-100 cursor-pointer font-medium">
+					Más Información
+				</button>
+			</div>
+		</div>
+		<div class="m-auto mt-5 2xl:w-8/12 sm:w-9/12 w-11/12">
+			<div class="flex mb-10 justify-center">
+
+				<Image 
+					src={deskMob}
+					alt="desktop"
+					class="rounded-xl w-full"
+					width={1500}
+					height={600}
+				/>
+			</div>
+
+		</div>
+
+
+
+
+		<div class="m-auto 2xl:w-9/12 w-10/12 grid grid-cols-2 gap-5">
+
+			<div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 max-h-min place-self-center">
+				<h3 class="text-2xl font-bold text-blue-800 mb-2">Clasificación Automática con IA</h3>
+				<p class="text-gray-600 mb-4">Prioriza reportes críticos en segundos usando inteligencia artificial.</p>
+				<p class="text-gray-700 mb-4">Nuestro sistema analiza fotos y descripciones para clasificar incidencias por urgencia y categoría automáticamente.</p>
+				<ul class="space-y-2 mb-6">
+					<li class="flex items-center">
+						<svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<span>95% de precisión en clasificación</span>
+					</li>
+					<li class="flex items-center">
+						<svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<span>Reduce tiempos de respuesta en 40%</span>
+					</li>
+					<li class="flex items-center">
+						<svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<span>10+ categorías predefinidas</span>
+					</li>
+				</ul>
+				<button class="text-blue-600 font-medium flex items-center">
+					Saber más
+					<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+				</button>
+				
+				<div class="mt-8 grid grid-cols-2 gap-4">
+					<div class="bg-blue-50 p-4 rounded-lg">
+						<p class="text-sm text-gray-500">Reportes procesados</p>
+						<p class="text-2xl font-bold">1,245</p>
+						<p class="text-green-500 text-sm flex items-center">
+							<span>▲ 5%</span>
+							<span class="text-gray-400 ml-1">vs semana pasada</span>
+						</p>
+					</div>
+					<div class="bg-blue-50 p-4 rounded-lg">
+						<p class="text-sm text-gray-500">Eficiencia ganada</p>
+						<p class="text-2xl font-bold">$12,345</p>
+						<p class="text-green-500 text-sm flex items-center">
+							<span>▲ 8%</span>
+							<span class="text-gray-400 ml-1">en productividad</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center">
+
+				<Image
+					src={chartsImage}
+					alt="desktop"
+					class="rounded-tl-xl rounded-bl-xl"
+					width={550}
+					height={300}
+				/>
+			</div>
+		</div>
+
+
+
+
+		<div class="m-auto 2xl:w-9/12 w-10/12 grid grid-cols-2 gap-5 mt-7">
+			<div class="flex justify-center">
+
+				<Image
+					src={usersImage}
+					alt="desktop"
+					class="rounded-tr-xl rounded-br-xl"
+					width={550}
+					height={300}
+				/>
+			</div>
+
+				<div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 max-h-min place-self-center">
+						<h3 class="text-2xl font-bold text-blue-800 mb-2">Dashboard en Tiempo Real</h3>
+						<p class="text-gray-600 mb-4">Visualiza métricas clave para la toma de decisiones.</p>
+						<p class="text-gray-700 mb-4">Monitorea tendencias, tiempos de respuesta y categorías más reportadas con gráficos interactivos.</p>
+						<ul class="space-y-2 mb-6">
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<span>Gráficos personalizables</span>
+							</li>
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<span>Exporta a PDF/Excel</span>
+							</li>
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<span>Alertas automáticas</span>
+							</li>
+						</ul>
+						<button class="text-blue-600 font-medium flex items-center">
+							Saber más
+							<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+							</svg>
+						</button>
+						
+
+				</div>
+        	</div>
+
+		</div>
+
+
+
+		<div class="m-auto 2xl:w-9/12 w-10/12 grid grid-cols-2 gap-5 mt-7 ">
+
+	        <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 max-h-min place-self-center">
+				<h3 class="text-xl font-bold text-blue-800 mb-2">App Móvil Integrada</h3>
+				<p class="text-gray-600 mb-4">Reporta incidencias desde cualquier lugar con tu smartphone.</p>
+				<p class="text-gray-700 mb-4">Toma fotos, describe el problema y envía reportes en segundos. Recibe notificaciones push cuando se resuelvan.</p>
+				<ul class="space-y-2 mb-6">
+					<li class="flex items-center">
+						<svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<span>Cámara integrada</span>
+					</li>
+					<li class="flex items-center">
+						<svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<span>Notificaciones en tiempo real</span>
+					</li>
+					<li class="flex items-center">
+						<svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<span>Funciona sin conexión</span>
+					</li>
+				</ul>
+				<button class="text-blue-600 font-medium flex items-center">
+					Descargar ahora
+					<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+				</button>
+				
+				<div class="mt-6 grid grid-cols-2 gap-4">
+					<div class="bg-blue-50 p-3 rounded-lg">
+						<p class="text-xs text-gray-500">Descargas</p>
+						<p class="text-xl font-bold">2,500+</p>
+					</div>
+					<div class="bg-blue-50 p-3 rounded-lg">
+						<p class="text-xs text-gray-500">Valoración</p>
+						<p class="text-xl font-bold">4.8★</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center ">
+
+				<Image
+					src={mobileDetail}
+					alt="desktop"
+					class="rounded-xl"
+					width={550}
+					height={300}
+				/>
+			</div>
+			</div>
+		</div>
+
+
+		
+	</div>
 </Layout>

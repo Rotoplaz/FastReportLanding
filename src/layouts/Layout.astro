@@ -1,3 +1,8 @@
+---
+import "../styles/global.css";
+
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,6 +13,11 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<div class="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+			<div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_400px_at_100%_100px,#93c5fd,transparent)]"></div>
+			<div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_300px_at_0%_300px,#bfdbfe,transparent)]"></div>
+		</div>
+	</div>
 		<slot />
 	</body>
 </html>
