@@ -1,33 +1,67 @@
 ---
-
 ---
+<script>
+  const menuButton = document.getElementById('menu-button');
+  const menuItems = document.getElementById('menu-items');
+
+  menuButton?.addEventListener('click', () => {
+    menuItems?.classList.toggle('hidden');
+    menuItems?.classList.toggle('flex');
+  });
+</script>
+
 <nav
-  class="flex justify-between items-center py-2 px-3 w-11/12 sm:w-6/12 mx-auto rounded-full border-2 border-gray-400 mt-10
+  class="flex flex-wrap justify-between items-center py-2 px-3 w-11/12 md:w-9/12 lg:w-6/12 mx-auto rounded-full border-2 border-gray-400 mt-10
         backdrop-blur-[21px] backdrop-saturate-[124%] bg-white/30 fixed left-1/2 -translate-x-1/2 top-0 z-50"
 >
   <h2 class="text-xl font-semibold text-center text-[#1b1b1b]">
     Reporte Rapido
   </h2>
-  <ul class="flex gap-3 font-medium">
-    <li
-      class="px-3 py-2 rounded-full transition-colors hover:bg-slate-100 cursor-pointer"
+
+  <button
+    id="menu-button"
+    class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none"
+    aria-label="Menu"
+  >
+    <svg
+      class="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
     >
-        <a href="/">
-            Inicio
-        </a>
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16"
+      ></path>
+    </svg>
+  </button>
+
+  <ul
+    id="menu-items"
+    class="hidden md:flex w-full md:w-auto mt-4 md:mt-0 md:flex-row flex-col items-center gap-3 font-medium absolute md:relative top-full left-0 right-0 bg-white/95 md:bg-transparent p-4 md:p-0 rounded-lg md:rounded-none border md:border-0 shadow-lg md:shadow-none"
+  >
+    <li
+      class="w-full md:w-auto px-3 py-2 rounded-full transition-colors hover:bg-slate-100 cursor-pointer text-center"
+    >
+      <a href="/" class="block w-full">
+        Inicio
+      </a>
     </li>
     <li
-      class="px-3 py-2 rounded-full transition-colors hover:bg-slate-100 cursor-pointer"
+      class="w-full md:w-auto px-3 py-2 rounded-full transition-colors hover:bg-slate-100 cursor-pointer text-center"
     >
-      Caracteristicas
+      <a href="#" class="block w-full">
+        Caracteristicas
+      </a>
     </li>
     <li
-      class="px-3 py-2 rounded-full transition-colors hover:bg-slate-100 cursor-pointer"
+      class="w-full md:w-auto px-3 py-2 rounded-full transition-colors hover:bg-slate-100 cursor-pointer text-center"
     >
-        <a href="/sobre-nosotros">
-            Sobre nosotros
-        </a>
+      <a href="/sobre-nosotros" class="block w-full">
+        Sobre nosotros
+      </a>
     </li>
-    <li></li>
   </ul>
 </nav>
