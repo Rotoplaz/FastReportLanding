@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
 import "../styles/global.css";
 
 ---
@@ -18,7 +20,9 @@ import "../styles/global.css";
 			<div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_300px_at_0%_300px,#bfdbfe,transparent)]"></div>
 		</div>
 	</div>
-		<slot />
+	<Nav />
+	<slot />
+	<Footer />
 	</body>
 </html>
 
